@@ -12,6 +12,10 @@ The assumption is that obtaining a new customer is more expensive than retaining
 - Remove redundant columns, target
 - Build feature matrix and standardize
 - Build ROC curve to determine how we will handle imbalanced target size
-- Build five models with normalized confusion matrix for each model
+- Build four models with normalized confusion matrix for each model
 - Get feature importance from whichever model performs best
 
+The models evaluated were: Logistic Regression, Decision Tree, Gradient Boosting, and XGBoost. XGBoost proved to be the most accurate. 
+I also used GridSearchCV to find the best parameters for XGBoost; this resulted in an accuracy score of 97%.
+
+Finally, I plotted the feature importance of the XGBoost model (using gain) to determine the features our telecommunications company should focus on to reduce churn.
